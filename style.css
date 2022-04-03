@@ -1,43 +1,173 @@
+* {
+	box-sizing: border-box;
+}
+
 html, body{
     width: 100%;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
+
+
+.confirmingOrder{
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+.orderDetails{
+    background-color: #50D074;
+    width: 90%;
+    height: 34%;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px 1px #00000040;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.orderDetails > div:nth-child(1), .orderDetails > div:nth-child(3), .orderDetails > div:nth-child(4){
+    font-weight: 700;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orderDetails > div:nth-child(1), .orderDetails > div:nth-child(4){
+    color: #FFFFFF;
+}
+.orderDetails > div:nth-child(3){
+    background-color: #FFFFFF;
+    color: #50D074;
+    width: 88%;
+    height: 14%;
+    border-radius: 100px;
+    
+}
+.itens{
+    width: 86%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.itens > div{
+    display: flex;
+    justify-content: space-between;
+}
+.itens div{
+    font-weight: 300;
+    font-size: 22px;
+    color: #FFFFFF;
+}
+.itens div:nth-child(4) *{
+    font-weight: 700;
+}
+
+
+
+
 .orderPage{
     width: 100%;
     height: 100%;
 }
+
 .top{
-    background-color: red;
+    background-color: #CF2B2B;
     width: 100%;
     height: 9%;
+    color: #FFFFFF;
+    padding-top: 8px;
+    padding-bottom: 18px;
+    box-shadow: 20px 20px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.top div{
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 400;
+
+}
+.top div:nth-child(1){
+    font-size: 44px;
+    font-family: 'Righteous', cursive;
+    width: fit-content;
+    height: fit-content;
+    
 }
 .bottom{
-    background-color: blue;
+    background-color: #FFFFFF;
     width: 100%;
     height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orderConditionNegative {
+    background-color: #CBCBCB;
+    border-radius: 50px;
+    width: 88%;
+    height: 66%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+.orderConditionPositive{
+    background-color: #32B72F;
+    border-radius: 50px;
+    width: 88%;
+    height: 66%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
 }
 
 .foodSections{
-    background-color: yellow;
+    background-color: #E5E5E5;
     width: 100%;
     height: 82%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
 }
 .foodSection{
-    background-color: green;
     width: 100%;
     height: 30%;
+
 }
 
 .sectionName{
-    background-color: rebeccapurple;
+    background-color: #E5E5E5;
+    color: #333333;
     width: 100%;
     height: 10%;
+    text-align: start;
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    margin-bottom: 10px;
+    margin-left: 20px;
 }
 .foodOptions{
-    background-color: orange;
     width: 100%;
     height: 83%;
     display: flex;
@@ -45,9 +175,51 @@ html, body{
 }
 
 .foodOption{
-    background-color: orangered;
-    width: 200px;
+    background-color: #FFFFFF;
+    min-width: 172px;
     height: 100%;
     margin-left: 2%;
     margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    position: relative;
+}
+.foodOption *{
+    margin-left: 14px;
+}
+.foodOption img{
+    width: 144px;
+    height: 87px;
+}
+.foodOption div:nth-child(2){
+    font-weight: 700;
+    font-size: 16px;
+    color: #333333;
+}
+.foodOption div:nth-child(3){
+    font-weight: 300;
+    font-size: 15px;
+    color: #A6A6A6;
+}
+.foodOption div:nth-child(4){
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+}
+.foodOption ion-icon{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 16px;
+    color: #32B72F;
+}
+.selecionado{
+    border: 5px solid #32B72F;
+}
+
+.hidden{
+    display: none;
 }
